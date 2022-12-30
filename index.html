@@ -1,41 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
-</head>
-<header>
-</header>
-<body>
-    <div class="bg">
-        <div class="dot"></div>
-        <div class="dot"></div>
-    </div>
-    <form>
-        <div class="form__icon">
-            
-        </div>
-        
-        <div class="form__input-container">
-            <input id="username" type="text" placeholder=" "/>
-            <label for="user">User</label>
-            
-        </div>
-        <div class="form__input-container">
-            <input id="password" type="password"placeholder=" "/>
-            <label for="password">Password</label>
-             
-        </div>
-        <div class="form__spacer"></div>
-        <button id ="loginButton" type="button" onclick=getInfo()>
-            Login
-        </button>
-       
-    </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cssForMain.css" />
+    <script src ="./scripts/monthCheck.js" type="module"></script>
+    <script src="./scripts/jsScript.js"></script>
     
-</body>
+    
+    
+    <title>Document</title>
+    <div class="upperBox">
+      
+      <div class="icons">
+        <img class="iconsIcon" src="icons/infoIcon.png" alt="" onclick="openBox('event')"/>
+        <img
+          class="iconsIcon"
+          src="icons/messageIcon.png"
+          alt=""
+          onclick="openBox('messageScreen')"
+        />
+        <img class="iconsIcon" src="icons/accountIcon.png" alt="" />
+      </div>
+      <div>
+        <div class="Logo">logo</div>
+      </div>
+      
+      <div>
+        <input class="search" type="text" placeholder="Wyszukaj" />
+      </div>
+    </div>
+  </head>
+  <body>
+    <div class="messageScreen" id="messageScreen">
+      <h2>Leave your message</h2>
+      <textarea name="" id="messageTextArea" cols="30" rows="12"></textarea>
+      <button class="messageScreenButton" type="button" onclick="closeBox('messageScreen')">
+        Submit
+      </button>
+      
+    </div>
+    <div class="event" id="event">
+      <h2>Tematyka Mesięca</h2>
+      <div id="eventCheck"></div>
+      <button class="eventScreenButton" type="button" onclick="closeBox('event')" >
+        Submit
+        
+      </button>
+    </div>
+    <div class="bottomBox" onclick="closeBox('messageScreen')">
+      <div class="line"></div>
+
+      <div class="mainContainer">
+        <div class="container">
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+        </div>
+        <div class="secondContainer">
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+          <div class="box">
+            <div class="headerBox">
+              <img class="bookIMG" src="book.png" alt="" />
+              <div class="descBox">
+                <p>Autor: Jakub Pawlak</p>
+                <p>Tytuł: Test tytuł</p>
+              </div>
+            </div>
+            <div class="contentBox">
+              <i
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur eget libero ut turpis placerat fermentum. Mauris
+                venenatis condimentum nibh id congue. Morbi varius ex laoreet
+                ante scelerisque varius. Suspendisse at eleifend nunc. Praesent
+                convallis, nunc et ullamcorper lacinia, sapien enim vulputate
+                lectus, quis eleifend leo nisi id enim. Donec et iaculis lacus.
+                Praesent lobortis ex ipsum, non consectetur metus rhoncus in.
+                Cras sed efficitur orci. Sed pellentesque felis ut felis finibus
+                pulvinar et gravida lectus. Curabitur sed ligula at neque dictum
+                feugiat. Ut in mauris augue. Mauris vehicula lobortis faucibus.
+                Donec bibendum vulputate egestas. Aliquam tristique metus quis
+                arcu dignissim sodales. Nulla rutrum sed turpis ut vehicula.
+                Suspendisse bibendum risus sit amet nulla vehicula interdum.</i
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
